@@ -1,5 +1,5 @@
 {
-	"name": "DestinationDataset_0os",
+	"name": "DS_Destination_Datalake_DatosMovies",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "linkeddatalake",

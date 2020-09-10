@@ -175,7 +175,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_0os",
+						"referenceName": "DS_Destination_Datalake_DatosMovies",
 						"type": "DatasetReference"
 					}
 				]
