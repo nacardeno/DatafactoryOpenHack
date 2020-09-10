@@ -1,5 +1,5 @@
 {
-	"name": "CopyPipeline_0os",
+	"name": "plCopyDataSouthridgeMoviesCosmosDB",
 	"properties": {
 		"activities": [
 			{
