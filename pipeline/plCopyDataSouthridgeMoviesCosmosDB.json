@@ -169,7 +169,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_0os",
+						"referenceName": "DS_Source_MoviesCosmosDB",
 						"type": "DatasetReference"
 					}
 				],
