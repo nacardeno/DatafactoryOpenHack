@@ -26,7 +26,18 @@
 					"name": "sourceMovies"
 				},
 				{
+					"dataset": {
+						"referenceName": "DS_Source_StgCabeceraVentas",
+						"type": "DatasetReference"
+					},
 					"name": "sourceCabeceraVentas"
+				},
+				{
+					"dataset": {
+						"referenceName": "DS_Source_StgDetalleVentas",
+						"type": "DatasetReference"
+					},
+					"name": "sourceDetalleVentas"
 				}
 			],
 			"sinks": [
@@ -50,10 +61,17 @@
 						"type": "DatasetReference"
 					},
 					"name": "DestinationMovies"
+				},
+				{
+					"dataset": {
+						"referenceName": "DS_Destination_prtCabeceraVentas",
+						"type": "DatasetReference"
+					},
+					"name": "DestinationCabeceraVentas"
 				}
 			],
 			"transformations": [],
-			"script": "source(output(\n\t\tCustomerID as string,\n\t\tLastName as string,\n\t\tFirstName as string,\n\t\tPhoneNumber as string,\n\t\tCreatedDate as string,\n\t\tUpdatedDate as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> sourceClientes\nsource(output(\n\t\tAddressID as string,\n\t\tCustomerID as string,\n\t\tAddressLine1 as string,\n\t\tAddressLine2 as string,\n\t\tCity as string,\n\t\tState as string,\n\t\tZipCode as string,\n\t\tCreatedDate as string,\n\t\tUpdatedDate as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> sourceDirecciones\nsource(output(\n\t\tColumn_1 as string,\n\t\tColumn_2 as string,\n\t\tColumn_3 as string,\n\t\tColumn_4 as string,\n\t\tColumn_5 as string,\n\t\tColumn_6 as string,\n\t\tColumn_7 as string,\n\t\tColumn_8 as string,\n\t\tColumn_9 as string,\n\t\tColumn_10 as string,\n\t\tColumn_11 as string,\n\t\tColumn_12 as string,\n\t\tColumn_13 as string,\n\t\tColumn_14 as string,\n\t\tColumn_15 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> sourceMovies\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> sourceCabeceraVentas\nsourceClientes sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> DestinationClientes\nsourceDirecciones sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> DestinationDirecciones\nsourceMovies sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> DestinationMovies"
+			"script": "source(output(\n\t\tCustomerID as string,\n\t\tLastName as string,\n\t\tFirstName as string,\n\t\tPhoneNumber as string,\n\t\tCreatedDate as string,\n\t\tUpdatedDate as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> sourceClientes\nsource(output(\n\t\tAddressID as string,\n\t\tCustomerID as string,\n\t\tAddressLine1 as string,\n\t\tAddressLine2 as string,\n\t\tCity as string,\n\t\tState as string,\n\t\tZipCode as string,\n\t\tCreatedDate as string,\n\t\tUpdatedDate as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> sourceDirecciones\nsource(output(\n\t\tColumn_1 as string,\n\t\tColumn_2 as string,\n\t\tColumn_3 as string,\n\t\tColumn_4 as string,\n\t\tColumn_5 as string,\n\t\tColumn_6 as string,\n\t\tColumn_7 as string,\n\t\tColumn_8 as string,\n\t\tColumn_9 as string,\n\t\tColumn_10 as string,\n\t\tColumn_11 as string,\n\t\tColumn_12 as string,\n\t\tColumn_13 as string,\n\t\tColumn_14 as string,\n\t\tColumn_15 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> sourceMovies\nsource(output(\n\t\t{197ef1bf-2d4d-4813-83ca-000037f8ffb6} as string,\n\t\t{ad803f0b-688f-4d6b-a8ba-6c1c96ccb911} as string,\n\t\t{2017-04-17 00:00:00.00000002} as string,\n\t\t{2017-04-21 00:00:00.00000003} as string,\n\t\t{34.9800} as string,\n\t\t{2017-04-17 00:00:00.00000005} as string,\n\t\t{2017-04-21 00:00:00.00000006} as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> sourceCabeceraVentas\nsource(output(\n\t\tColumn_1 as string,\n\t\tColumn_2 as string,\n\t\tColumn_3 as string,\n\t\tColumn_4 as string,\n\t\tColumn_5 as string,\n\t\tColumn_6 as string,\n\t\tColumn_7 as string,\n\t\tColumn_8 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> sourceDetalleVentas\nsourceClientes sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> DestinationClientes\nsourceDirecciones sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> DestinationDirecciones\nsourceMovies sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> DestinationMovies\nsourceCabeceraVentas sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> DestinationCabeceraVentas"
 		}
 	}
 }

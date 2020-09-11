@@ -1,0 +1,55 @@
+{
+	"name": "DS_Source_StgCabeceraVentas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkeddatalake",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DS_Staging"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "dboOrders.txt",
+				"fileSystem": "datoscloudsales"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "197ef1bf-2d4d-4813-83ca-000037f8ffb6",
+				"type": "String"
+			},
+			{
+				"name": "ad803f0b-688f-4d6b-a8ba-6c1c96ccb911",
+				"type": "String"
+			},
+			{
+				"name": "2017-04-17 00:00:00.00000002",
+				"type": "String"
+			},
+			{
+				"name": "2017-04-21 00:00:00.00000003",
+				"type": "String"
+			},
+			{
+				"name": "34.9800",
+				"type": "String"
+			},
+			{
+				"name": "2017-04-17 00:00:00.00000005",
+				"type": "String"
+			},
+			{
+				"name": "2017-04-21 00:00:00.00000006",
+				"type": "String"
+			}
+		]
+	}
+}

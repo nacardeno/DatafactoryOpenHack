@@ -1,0 +1,23 @@
+{
+	"name": "DS_Destination_prtCabeceraVentas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkeddatalake",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DS_Staging"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "CabeceraVentas",
+				"fileSystem": "staging"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
