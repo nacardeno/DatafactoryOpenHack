@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "DFClientes",
+						"referenceName": "DFSouthridge",
 						"type": "DataFlowReference"
 					},
 					"compute": {
