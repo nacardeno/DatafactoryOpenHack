@@ -1,5 +1,5 @@
 {
-	"name": "DS_Destination_prqClientes",
+	"name": "DS_Destination_prtClientes",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "linkeddatalake",

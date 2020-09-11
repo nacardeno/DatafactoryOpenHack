@@ -32,7 +32,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "DS_Destination_prqClientes",
+						"referenceName": "DS_Destination_prtClientes",
 						"type": "DatasetReference"
 					},
 					"name": "DestinationClientes"
