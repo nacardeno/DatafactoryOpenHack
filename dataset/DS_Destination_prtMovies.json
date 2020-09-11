@@ -1,19 +1,16 @@
 {
-	"name": "DS_Destination_prtDirecciones",
+	"name": "DS_Destination_prtMovies",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "linkeddatalake",
 			"type": "LinkedServiceReference"
-		},
-		"folder": {
-			"name": "DS_Staging"
 		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "Direcciones",
+				"folderPath": "Movies",
 				"fileSystem": "staging"
 			},
 			"compressionCodec": "snappy"

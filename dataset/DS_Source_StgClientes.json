@@ -1,5 +1,5 @@
 {
-	"name": "DT_Source_StgClientes",
+	"name": "DS_Source_StgClientes",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "linkeddatalake",
