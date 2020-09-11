@@ -1,5 +1,5 @@
 {
-	"name": "DS_SourceMovies",
+	"name": "DS_Source_Movies",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "linkeddatalake",
