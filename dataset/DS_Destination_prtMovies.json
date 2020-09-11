@@ -5,6 +5,9 @@
 			"referenceName": "linkeddatalake",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "DS_Staging"
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
