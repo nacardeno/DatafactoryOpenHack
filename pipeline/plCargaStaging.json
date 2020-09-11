@@ -1,0 +1,9 @@
+{
+	"name": "plCargaStaging",
+	"properties": {
+		"folder": {
+			"name": "Cargas Staging"
+		},
+		"annotations": []
+	}
+}

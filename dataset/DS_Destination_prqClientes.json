@@ -1,0 +1,22 @@
+{
+	"name": "DS_Destination_prqClientes",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkeddatalake",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DS_Staging"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "staging"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
