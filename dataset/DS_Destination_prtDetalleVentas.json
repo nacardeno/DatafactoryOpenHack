@@ -1,0 +1,20 @@
+{
+	"name": "DS_Destination_prtDetalleVentas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkeddatalake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "DetalleVentas",
+				"fileSystem": "staging"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
